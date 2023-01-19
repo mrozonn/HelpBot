@@ -8,6 +8,7 @@ namespace HelpBot
 {
     class Program
     {
+        //testowa zmiana
         static void Main(string[] args)
         {
             MainAsync().GetAwaiter().GetResult();
