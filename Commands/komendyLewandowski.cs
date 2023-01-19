@@ -6,5 +6,9 @@ using DSharpPlus.Entities;
 
 public class komendyLewandowski : BaseCommandModule
 {
-   
+    [Command("ping2")]
+    public async Task PongCommand(CommandContext ctx)
+    {
+        await ctx.RespondAsync($"Pong!");
+    }
 }
