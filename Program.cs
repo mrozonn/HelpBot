@@ -8,7 +8,7 @@ namespace HelpBot
 {
     class Program
     {
-        //testowa zmiana
+        //testowa zmiana kurczak
         static void Main(string[] args)
         {
             MainAsync().GetAwaiter().GetResult();
