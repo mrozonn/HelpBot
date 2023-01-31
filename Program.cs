@@ -11,7 +11,6 @@ namespace HelpBot
 {
     class Program
     {
-        //testowa zmiana kurczak
         static void Main(string[] args)
         {
             MainAsync().GetAwaiter().GetResult();
@@ -25,7 +24,7 @@ namespace HelpBot
 
 
                 //token
-                Token = "MTA1MTE1NTU0OTY1MzMyMzg2Nw.GhB-IB.f6NzmKLNijk2CpF0_okDzlypAp4zgtt-q5vg6Q",
+                Token = "token",
                 TokenType = TokenType.Bot,
                 //uprawnienia
                 Intents = DiscordIntents.All,
@@ -59,4 +58,3 @@ namespace HelpBot
 
     }
 }
-//test
