@@ -25,7 +25,7 @@ namespace HelpBot
 
 
                 //token
-                Token = "MTA1MTE1NTU0OTY1MzMyMzg2Nw.GlIPwg.Pq8b_Ct4pE4JrMB2brqQVUswmDKOIedZhB2RFA",
+                Token = "token",
                 TokenType = TokenType.Bot,
                 //uprawnienia
                 Intents = DiscordIntents.All,
