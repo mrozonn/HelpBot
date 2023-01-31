@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Interactivity;
+using DSharpPlus.Interactivity.Enums;
+using DSharpPlus.Interactivity.Extensions;
 using Microsoft.Extensions.Logging;
 
 namespace HelpBot
@@ -17,6 +19,7 @@ namespace HelpBot
 
         static async Task MainAsync()
         {
+
             var discord = new DiscordClient(new DiscordConfiguration()
             {
 
@@ -29,7 +32,15 @@ namespace HelpBot
                 //logi w command linie
                 MinimumLogLevel = LogLevel.Debug,
 
+
             });
+
+
+            discord.UseInteractivity(new InteractivityConfiguration()
+            {
+                Timeout = TimeSpan.FromMinutes(2)
+            });
+
             //implementacja komend poprzedzonych prefixem
             var commands = discord.UseCommandsNext(new CommandsNextConfiguration()
             {
