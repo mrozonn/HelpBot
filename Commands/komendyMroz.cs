@@ -15,7 +15,7 @@ public class komendyMroz : BaseCommandModule
         var interactivity = ctx.Client.GetInteractivity();
         var roleEmbed = new DiscordEmbedBuilder
         {
-            Title = "Wybierz jedną lub kilka ról!",
+            Title = "Wybierz role!",
             Color = DiscordColor.Red,
             Description = "Gry:" + System.Environment.NewLine + ":lol: League Of Legends" + System.Environment.NewLine + ":cs: Counter-Strike: Global Offensive" + System.Environment.NewLine + ":apex: Apex: Legends" + System.Environment.NewLine + ":fortnite: Fortnite" + System.Environment.NewLine + ":amogus: Among Us" + System.Environment.NewLine + "DM: " + System.Environment.NewLine + ":open: Open" + System.Environment.NewLine + ":closed: Closed"
 
@@ -170,19 +170,5 @@ public class komendyMroz : BaseCommandModule
         await ctx.Message.DeleteAsync();
         await uzytkownik.RemoveAsync(powod);
         await ctx.RespondAsync("Użytkownik @" + uzytkownik.Username + "#" + uzytkownik.Discriminator + " został wyrzucony z serwera za " + powod);
-    }
-
-    [Command("Mute")]
-    [Description("Wyciszanie użytkownika na kanałach głosowych")]
-    [RequirePermissions(Permissions.MuteMembers)]
-    [Hidden]
-    public async Task mute(CommandContext ctx,
-          [Description("Wyciszany użytkownik")] DiscordMember uzytkownik)
-    {
-
-        var muteRole = ctx.Guild.GetRole(< MuteRoleID >);
-
-        await uzytkownik.GrantRoleAsync(muteRole);
-        await ctx.RespondAsync($"{uzytkownik.Username} was muted."); 
     }
 }

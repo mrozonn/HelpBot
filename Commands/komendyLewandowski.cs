@@ -56,8 +56,16 @@ public class komendyLewandowski : BaseCommandModule
         var AdminMessage = await ctx.Channel.SendMessageAsync(embed: adminEmbed).ConfigureAwait(false);
 
     }
-    
+
+    [Command("losowanie")]
+    public async Task LosowanieCommand(CommandContext ctx, int min, int max)
+    {
+        var random = new Random();
+        await ctx.RespondAsync($"Twoja liczba to: {random.Next(min, max)}");
+    }
 }
+    
+
 
 
 
