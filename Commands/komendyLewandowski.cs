@@ -1,9 +1,12 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+
+
 
 public class komendyLewandowski : BaseCommandModule
 {
@@ -33,7 +36,7 @@ public class komendyLewandowski : BaseCommandModule
         {
             Title = "Link do strony Opgg z profilem gracza",
             Color = DiscordColor.Blue,
-            Description = "Link do opgg oraz do najlepszych obecnie postaci z gry pod względem wygranych " + System.Environment.NewLine + "https://www.op.gg" + nick + System.Environment.NewLine + "https://www.op.gg/champions"
+            Description = "Link do opgg oraz do najlepszych obecnie postaci z gry pod względem wygranych " + System.Environment.NewLine + "https://www.op.gg/summoners/eune/" + nick + System.Environment.NewLine + "https://www.op.gg/champions"
         };
 
         var opggMessage = await ctx.Channel.SendMessageAsync(embed: OpggEmbed).ConfigureAwait(false);
@@ -53,8 +56,8 @@ public class komendyLewandowski : BaseCommandModule
         var AdminMessage = await ctx.Channel.SendMessageAsync(embed: adminEmbed).ConfigureAwait(false);
 
     }
-}
     
+}
 
 
 
